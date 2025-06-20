@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificación - Invex Banco</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #6B2C91 0%, #8B1538 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #6B2C91 0%, #8B1538 100%);
+            padding: 20px;
+            border-radius: 0 0 40px 40px;
+        }
+        
+        .logo {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 12px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 40px;
+        }
+        
+        .logo-text {
+            color: white;
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .logo-text .now {
+            font-weight: 200;
+        }
+        
+        .logo-text .invex {
+            font-weight: 500;
+        }
+        
+        .logo-text .banco {
+            font-size: 14px;
+            font-weight: 300;
+        }
+        
+        .content {
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .greeting {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        .main-message {
+            font-size: 20px;
+            color: #333;
+            font-weight: 500;
+            margin-bottom: 40px;
+            line-height: 1.4;
+        }
+        
+        .info-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+        
+        .user-icon {
+            width: 60px;
+            height: 60px;
+            background: #E5E5E5;
+            border-radius: 50%;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .user-icon::before {
+            content: "👤";
+            font-size: 24px;
+            color: #999;
+        }
+        
+        .info-text {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.5;
+        }
+        
+        .alert-box {
+            border: 2px solid #6B2C91;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 40px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .alert-text {
+            font-size: 16px;
+            color: #333;
+            margin-right: 10px;
+        }
+        
+        .bell-icon {
+            width: 30px;
+            height: 30px;
+            background: #6B2C91;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .bell-icon::before {
+            content: "🔔";
+            font-size: 16px;
+        }
+        
+        .bell-icon::after {
+            content: "";
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            width: 8px;
+            height: 8px;
+            background: #FF4444;
+            border-radius: 50%;
+        }
+        
+        .footer {
+            background: linear-gradient(135deg, #6B2C91 0%, #8B1538 100%);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            border-radius: 40px 40px 0 0;
+            margin-top: 40px;
+        }
+        
+        .phone-number {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        
+        .email-info {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+        
+        .template-vars {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .curved-element {
+            position: absolute;
+            top: 0;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <div class="curved-element"></div>
+            <div class="logo">
+                <div class="logo-text">
+                    <span class="now">now</span><br>
+                    <span class="invex">invex</span> <span class="banco">Banco</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="greeting">
+                ¡Hola, <strong>${nombre_primer_apellido}</strong>!
+            </div>
+            
+            <div class="main-message">
+                Transferencia no realizada
+            </div>
+            
+            <div class="info-section">
+                <div class="user-icon"></div>
+                <div class="info-text">
+                    No pudimos procesar tu transferencia porque el monto supera el límite permitido para esta operación. Si lo necesitas, puedes modificar tu límite desde tu <strong>App INVEX Now</strong> en el menú principal o en el botón <strong>"Más opciones"</strong> dentro del detalle de tu <strong>Cuenta Now</strong>.
+                </div>
+            </div>
+            
+            <div class="alert-box">
+                <div class="alert-text">
+                    Si no realizaste esta acción,<br>contáctanos de inmediato.
+                </div>
+                <div class="bell-icon"></div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="phone-number">
+                Línea de Atención Telefónica 55 4000 4000
+            </div>
+            
+            <div class="email-info">
+                Para asegurar la entrega de nuestros emails, por favor agrega notificacionesnow@invex.com<br>
+                a tu libreta de direcciones de correo.
+            </div>
+            
+            <div class="template-vars">
+                Este correo electrónico ha sido enviado a ${correo_cliente}<br><br>
+                ${banco_emisor}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
