@@ -27,7 +27,7 @@
         }
         
         .header {
-            background: linear-gradient(135deg, #6B2C91 0%, #8B1538 100%);
+            /* background: linear-gradient(135deg, #6B2C91 0%, #8B1538 100%); */
             padding: 20px;
             border-radius: 0 0 40px 40px;
         }
@@ -155,12 +155,20 @@
         }
         
         .footer {
-            background: linear-gradient(135deg, #6B2C91 0%, #8B1538 100%);
-            color: white;
+            color: #000000;
             text-align: center;
             padding: 25px;
             border-radius: 40px 40px 0 0;
             margin-top: 40px;
+        }
+
+        .container-image {
+            width: 100%;
+        }
+        .container-image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
         }
         
         .phone-number {
@@ -171,14 +179,12 @@
         
         .email-info {
             font-size: 12px;
-            color: rgba(255, 255, 255, 0.8);
             line-height: 1.4;
             margin-bottom: 15px;
         }
         
         .template-vars {
             font-size: 11px;
-            color: rgba(255, 255, 255, 0.6);
         }
         
         .curved-element {
@@ -195,7 +201,7 @@
 </head>
 <body>
     <div class="email-container">
-        <div class="header">
+        <!-- <div class="header">
             <div class="curved-element"></div>
             <div class="logo">
                 <div class="logo-text">
@@ -203,7 +209,12 @@
                     <span class="invex">invex</span> <span class="banco">Banco</span>
                 </div>
             </div>
-        </div>
+        </div> -->
+        <tr>
+                    <td width="600">
+                        <a href="https://www.invextarjetas.com.mx/index#/home" target="_blank"><img src="https://d3jx1664xx9tr2.cloudfront.net/assets/Mayo25/Mailing_WA_Abril/VolarisInvex2.0/Body_invex.png" alt="MailingDespegar" width="600" height="auto" border="0" style="display: block; margin-top: 0; margin-bottom: 0; text-align:center"></a>
+                    </td>
+                </tr>  
         
         <div class="content">
             <div class="greeting">
@@ -215,24 +226,32 @@
             </div>
             
             <div class="info-section">
-                <div class="user-icon"></div>
+                <!-- <div class="user-icon"></div> -->
                 <div class="info-text">
                     Puedes volver a añadirlo o agregar otra cuenta del mismo destinatario en la opción <strong>"Transferir"</strong> en tu <strong>Cuenta Now</strong>.
                 </div>
             </div>
             
-            <div class="alert-box">
+            <!-- <div class="alert-box">
                 <div class="alert-text">
                     Si no realizaste esta acción,<br>contáctanos de inmediato.
                 </div>
                 <div class="bell-icon"></div>
+            </div> -->
+            <div class="container-image">
+                <img src="https://d3jx1664xx9tr2.cloudfront.net/assets/junio 25/imagenes_invex_autorizada01/icono_campana_invexx.png" alt="Now Invex Banco" style="width: 200px; margin: 20px auto; display: block;"></img>
             </div>
         </div>
         
         <div class="footer">
-            <div class="phone-number">
+            <!-- <div class="phone-number">
                 Línea de Atención Telefónica 55 4000 4001
-            </div>
+            </div> -->
+                <tr>
+                    <td width="600">
+                        <a href="https://www.invextarjetas.com.mx/index#/home" target="_blank"><img src="https://d3jx1664xx9tr2.cloudfront.net/assets/junio 25/imagenes_invex_autorizada01/banner_inferior_invex.png" alt="MailingDespegar" width="600" height="auto" border="0" style="display: block; margin-top: 0; margin-bottom: 0; text-align:center"></a>
+                    </td>
+                </tr>  
             
             <div class="email-info">
                 Para asegurar la entrega de nuestros emails, por favor agrega notificacionesnow@invex.com<br>
